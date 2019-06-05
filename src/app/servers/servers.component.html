@@ -1,5 +1,8 @@
 <label>Server name</label>
 <input type="text" class="form-control" (input)= "onUpdateServerName($event)"> 
+<!-- using two way binding, will update the component field and will also update the value in the textbox if we change server name somewhere else -->
+<input type="text" class="form-control" [(ngModel)]="serverName">  
+
 <button class = "btn btn-primary" [disabled]="!allowNewServer" 
 (click)= "OnCreateServer()"  >Add server</button>
 <p>{{serverName}}</p>
