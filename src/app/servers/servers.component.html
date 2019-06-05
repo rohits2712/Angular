@@ -13,3 +13,7 @@
 <p>{{serverCreationStatus}}</p>
 <!-- here removed curly braces by inner text, so used property binding instead of string interpolation -->
 <!-- Output some text , should use string interpolation and changing property - use property binding -->
+<p *ngIf = "serverCreated;else noServer;">Server created. Name is {{serverCreated}} </p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
