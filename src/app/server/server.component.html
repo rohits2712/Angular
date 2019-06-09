@@ -1,2 +1,3 @@
-<p>Server with id {{serverId}} is {{getServerStatus()}} </p>
+<p [ngStyle] ="{backgroundColor:getColor()}" [ngClass]="{online:serverStatus ==='online'}">Server with id {{serverId}} is {{getServerStatus()}} </p>
+<!-- while style is used to change css style itself, ngClass allows to add/ remove css classes -->
 <!-- string interpolation -->
