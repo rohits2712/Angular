@@ -7,8 +7,16 @@
 (click)= "OnCreateServer()"  >Add server</button>
 <p>{{serverName}}</p>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of serverNames"></app-server>
+<table>
+    <tr><td>Server index</td><td>Server names</td><td>Online</td></tr>
+    <tr *ngFor="let server of servers;let myindex = index;let evenrecord=even;let oddrecord = odd;" [ngClass]="{odd:oddrecord,even:evenrecord}"
+     >
+     <td>{{myindex+1}}</td><td>{{server.name}}</td><td>{{server.online}}</td></tr>
+</table>
+
+
+
 <p [innerText] = "allowNewServer"></p> 
 <p>{{serverCreationStatus}}</p>
 <!-- here removed curly braces by inner text, so used property binding instead of string interpolation -->
