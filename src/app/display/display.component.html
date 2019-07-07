@@ -1,0 +1,8 @@
+<hr>
+<div *ngIf="displayName;else elseBlock">
+   <p> show display</p>
+</div>
+
+<ng-template #elseBlock>
+    <p>hide display</p>
+  </ng-template>
