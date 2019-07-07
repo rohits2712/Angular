@@ -25,3 +25,21 @@
 <ng-template #noServer>
     <p>No server was created</p>
 </ng-template>
+
+
+<h2 class="text-success">CodeEvolution</h2>
+<h2 [class]="successClass">CodeEvolution</h2> 
+<!-- class binding -->
+<h2 [class]="successClass" class="text-special" >CodeEvolution</h2>
+<h2 [class.text-danger]="hasError" >CodeEvolution</h2>
+<h2 [ngClass]="messageClasses">CodeEvolution</h2>
+<h2 [style.color]="hasError?'red':'green'">StyleBinding</h2>
+<h2 [style.color]="highlighightColor">Stylebinding2</h2>
+<h2 [ngStyle]="titleStyles">Stylebinding3</h2>
+<!-- <h2 [class.text-danger]="hasError">CodeEvolution</h2> -->
+<button (click)="onClick($event)" >Greet</button>
+<button (click)="greeting='Welcome Rohit'" >Greet</button>
+<!-- <input #myInput type="text">
+<button (click)="logMessage(myInput.value)">Log</button> -->
+<!-- Template reference variable not working -->
+{{greeting}}

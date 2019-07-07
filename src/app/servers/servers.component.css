@@ -1,2 +1,5 @@
 tr.even{background:black;color:green}
 tr.odd{background:white;color:black}
+.text-success{color:green;}
+.text-danger{color:red;}
+.text-special{font-style:italic;}

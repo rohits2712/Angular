@@ -21,6 +21,23 @@ export class ServersComponent implements OnInit {
         name: 'Test server 3', online:'True'},
         {
           name: 'Test server 4', online:'True'}];
+
+  public hasError= false;
+  public isSpecial =true;
+  public successClass ="text-success";
+  public highlighightColor="orange";
+  public messageClasses = {
+    "text-success" :!this.hasError,
+    "text-danger":this.hasError,
+    "text-special": this.isSpecial
+  }
+  public titleStyles={
+    color:"blue",
+    fontStyle:"italic"
+  }
+  greeting="";
+
+
   constructor() { 
       setTimeout(() => {
         this.allowNewServer = true;
@@ -30,6 +47,7 @@ export class ServersComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   OnCreateServer(){
     this.serverCreated = true;
     this.serverNames.push(this.serverName);
@@ -40,4 +58,13 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
 
   }
+  onClick(event){
+    console.log(event);
+    this.greeting =event.type;
+   
+  }
+  logMessage(value){
+    console.log(value);
+  }
 }
+  
