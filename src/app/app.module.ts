@@ -7,6 +7,7 @@ import { ServersComponent } from './servers/servers.component';
 import { DisplayComponent } from './display/display.component';
 import { EmployeeServiceService } from './employee-service.service';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import{HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [EmployeeServiceService],
   bootstrap: [AppComponent]
