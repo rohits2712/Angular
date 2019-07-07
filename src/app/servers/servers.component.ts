@@ -8,63 +8,67 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created';
-  serverName="Testserver";
+  serverName = "Testserver";
   serverCreated = false;
-  serverNames =['Test server','Test server 2'];
-  servers =[{
-     name:'Testserver', online:'True'},
-     {
-      name:'Testserver 2', online:'True'},
-      {
-        name:'Testserver 2', online:'True'},
-        {
-        name: 'Test server 3', online:'True'},
-        {
-          name: 'Test server 4', online:'True'}];
+  serverNames = ['Test server', 'Test server 2'];
+  servers = [{
+    name: 'Testserver', online: 'True'
+  },
+  {
+    name: 'Testserver 2', online: 'True'
+  },
+  {
+    name: 'Testserver 2', online: 'True'
+  },
+  {
+    name: 'Test server 3', online: 'True'
+  },
+  {
+    name: 'Test server 4', online: 'True'
+  }];
 
-  public hasError= false;
-  public isSpecial =true;
-  public successClass ="text-success";
-  public highlighightColor="orange";
+  public hasError = false;
+  public isSpecial = true;
+  public successClass = "text-success";
+  public highlighightColor = "orange";
   public messageClasses = {
-    "text-success" :!this.hasError,
-    "text-danger":this.hasError,
+    "text-success": !this.hasError,
+    "text-danger": this.hasError,
     "text-special": this.isSpecial
   }
-  public titleStyles={
-    color:"blue",
-    fontStyle:"italic"
+  public titleStyles = {
+    color: "blue",
+    fontStyle: "italic"
   }
-  greeting="";
+  greeting = "";
+  name = "";
 
-
-  constructor() { 
-      setTimeout(() => {
-        this.allowNewServer = true;
-      }, 2000);
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
 
   }
 
   ngOnInit() {
   }
-  
-  OnCreateServer(){
+
+  OnCreateServer() {
     this.serverCreated = true;
     this.serverNames.push(this.serverName);
-    this.serverCreationStatus = "Server was created. Name is "+ this.serverName;
+    this.serverCreationStatus = "Server was created. Name is " + this.serverName;
   }
 
-  onUpdateServerName(event : Event){
+  onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
 
   }
-  onClick(event){
+  onClick(event) {
     console.log(event);
-    this.greeting =event.type;
-   
+    this.greeting = event.type;
+
   }
-  logMessage(value){
+  logMessage(value) {
     console.log(value);
   }
 }
-  
