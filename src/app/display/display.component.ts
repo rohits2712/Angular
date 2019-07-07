@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-display',
@@ -10,6 +10,9 @@ export class DisplayComponent implements OnInit {
   displayName = "true";
   public color="";
   public colors=["red","blue","green"];
+  
+  @Input('parentData') public Appuser;
+  
   constructor() { 
     
   }

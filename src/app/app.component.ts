@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'] //styleurls can be replaced by styles and inline style  
 })
 export class AppComponent {
-  name = '';
+  public Appuser = "Rohit";
 }
