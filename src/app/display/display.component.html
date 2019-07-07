@@ -2,7 +2,15 @@
 <div *ngIf="displayName;else elseBlock">
    <p> show display</p>
 </div>
-
+{{displayName}}
 <ng-template #elseBlock>
     <p>hide display</p>
   </ng-template>
+
+  <hr>
+  <div [ngSwitch] = "color" >
+    <div *ngSwitchCase = "'red'">Red color</div>
+    <div *ngSwitchCase = "'blue'">blue color</div>
+    <div *ngSwitchCase = "'green'">green color</div>
+    <div *ngSwitchDefault >Pick again</div>
+  </div>

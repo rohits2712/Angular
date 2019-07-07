@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
   
-  displayName = "false";
+  displayName = "true";
+  public color="";
   constructor() { 
     
   }
