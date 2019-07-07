@@ -14,3 +14,7 @@
     <div *ngSwitchCase = "'green'">green color</div>
     <div *ngSwitchDefault >Pick again</div>
   </div>
+<div *ngFor="let color of colors; index as i">
+  <!-- odd as o, even as e -->
+  <h2>{{i}}-{{color}}</h2>
+</div>

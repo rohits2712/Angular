@@ -9,6 +9,7 @@ export class DisplayComponent implements OnInit {
   
   displayName = "true";
   public color="";
+  public colors=["red","blue","green"];
   constructor() { 
     
   }
