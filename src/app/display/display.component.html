@@ -22,3 +22,14 @@
 <h2>{{Appuser}}</h2>
 <!-- Sending event to parent -->
 <button (click)="fireEvent()">Send Event</button>
+
+{{(person.name | titlecase) + ' '+ person.surname}}
+{{(person.name | slice:3:5) + ' '+ person.surname}}
+<!-- json pipe does not works -->
+<!-- {{(person | json }} -->
+<h3>{{0.35 | percent}}</h3>
+<h3>{{0.35 | currency}}</h3>
+<h3>{{0.35 | currency:'EUR':'code'}}</h3>
+<h3>{{date| date:'short'}}</h3>
+<h3>{{date| date:'shortDate'}}</h3>
+<h3>{{date| date:'shortTime'}}</h3>
