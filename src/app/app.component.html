@@ -7,12 +7,12 @@
     <app-servers></app-servers>
     <!-- <div app-servers ></div>   -->
     <!-- when selector: '[app-servers]' or .app-servers at servers.component.ts -->
-
+    {{message}}
   </div>
 </div>
   <div class="row">
     <div class="col-xs-12">
-    <app-display [parentData]="Appuser"></app-display>
+    <app-display (childEvent)="message=$event" [parentData]="Appuser"></app-display>
 
     </div>
   </div>

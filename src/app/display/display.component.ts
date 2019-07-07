@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-display',
@@ -11,13 +11,18 @@ export class DisplayComponent implements OnInit {
   public color="";
   public colors=["red","blue","green"];
   
+  // Receiving input from parent
   @Input('parentData') public Appuser;
-  
+  // sending input to parent
+  @Output() public childEvent = new EventEmitter();
   constructor() { 
     
   }
 
   ngOnInit() {
+  }
+  fireEvent(){
+    this.childEvent.emit("Hi from child");
   }
 
 }
