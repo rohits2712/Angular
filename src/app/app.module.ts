@@ -8,6 +8,9 @@ import { DisplayComponent } from './display/display.component';
 import { EmployeeServiceService } from './employee-service.service';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import{HttpClientModule} from '@angular/common/http';
+import{AppRoutingModule, routingComponents} from './app-routing.module';
+// import { DepartmentListComponent } from './department-list/department-list.component';
+// import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,16 @@ import{HttpClientModule} from '@angular/common/http';
     ServerComponent,
     ServersComponent,
     DisplayComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    // DepartmentListComponent,
+    // EmployeeListComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [EmployeeServiceService],
   bootstrap: [AppComponent]
