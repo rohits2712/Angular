@@ -43,7 +43,10 @@ public selectedId;
   ngOnInit() {
   }
   onSelect(department){
-    this.router.navigate(['/departments', department.id]) //pass linked  parameter array  
+    //this.router.navigate(['/departments', department.id]) //pass linked  parameter array  
+    //but above messes up when the route is changed in the initial page ex departments changed to department-list
+    //Hence
+    this.router.navigate([department.id], {relativeTo: this.route}); //Relative navigation says append id and send to the route
   }
   IsSelectedId(department)
   {
