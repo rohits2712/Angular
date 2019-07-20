@@ -11,6 +11,8 @@ import{HttpClientModule} from '@angular/common/http';
 import{AppRoutingModule, routingComponents} from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 // import { DepartmentListComponent } from './department-list/department-list.component';
 // import { EmployeeListComponent } from './employee-list/employee-list.component';
 
@@ -25,7 +27,9 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
     // EmployeeListComponent,
     routingComponents,
     PageNotFoundComponent,
-    DepartmentDetailComponent
+    DepartmentDetailComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent
   ],
   imports: [
     BrowserModule,
