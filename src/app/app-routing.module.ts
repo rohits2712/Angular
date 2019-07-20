@@ -5,9 +5,10 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
+    {path:'', component:DepartmentListComponent},//setting default
     {path:'departments', component:DepartmentListComponent},
     {path:'employeelist', component:EmployeeListComponent},
-    {path:'*', component:PageNotFoundComponent},
+    {path:'**', component:PageNotFoundComponent},
 //wild card route to be always at the end
 ];
 
