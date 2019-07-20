@@ -10,6 +10,7 @@ import {ParamMap} from '@angular/router'
     </h3>
     <a (click) = "goPrevious()">Previous</a>
     <a (click) = "goNext()">Next</a>
+    <button (click) = "gotoDepartments()">Back</button>
   `,
   styles: []
 })
@@ -30,9 +31,15 @@ export class DepartmentDetailComponent implements OnInit {
     let prevId = this.departmentId-1;
     this.router.navigate(['/departments',prevId]);
   }
-  
+
   goNext(){
     let nextId = this.departmentId+1;
     this.router.navigate(['/departments',nextId]);
+  }
+
+  gotoDepartments()
+  {
+    let selectedId = this.departmentId ?  this.departmentId : null;
+    this.router.navigate(['/departments', {id:selectedId}])
   }
 }
